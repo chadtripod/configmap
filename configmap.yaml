@@ -1,14 +1,7 @@
-[
-  {
-    "type": "docker/image",
-    "name": "gcr.io/my-images/nginx",
-    "reference": "gcr.io/my-images/nginx@sha256:0cce25b9a55"
-  },
-  {
-    "type": "kubernetes/configMap",
-    "name": "configmap",
-    "version": "v001",
-    "location": "default",
-    "reference": "configmap-v001"
-  }
-]
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: special-config
+data:
+  favorite.color: blue
+  home.city: livermore
