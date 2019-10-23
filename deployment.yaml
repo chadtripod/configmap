@@ -21,8 +21,8 @@ spec:
             - containerPort: 80
           volumeMounts:
             - mountPath: /opt/config
-              name: my-config-map
+              name: special-config
       volumes:
         - configMap:
             name: configmap             # possible artifact
-          name: my-config-map
+          name: special-config
