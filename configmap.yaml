@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: special-config
 data:
-  favorite.color: purple
+  favorite.color: yellow
   home.city: livermore
