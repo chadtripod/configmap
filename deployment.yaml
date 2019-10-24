@@ -15,14 +15,15 @@ spec:
         app: nginx
     spec:
       containers:
-        - image: gcr.io/my-images/nginx # possible artifact
+        - image: nginx
           name: nginx
           ports:
             - containerPort: 80
           volumeMounts:
             - mountPath: /opt/config
-              name: special-config
+              name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
       volumes:
         - configMap:
-            name: configmap             # possible artifact
-          name: special-config
+            name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
+          name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
+
