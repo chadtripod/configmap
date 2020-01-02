@@ -4,4 +4,4 @@ metadata:
   name: special-config
 data:
   favorite.color: qa-yellow
-  home.city: livermore
+  home.city: qa-livermore
