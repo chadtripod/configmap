@@ -21,9 +21,9 @@ spec:
             - containerPort: 80
           volumeMounts:
             - mountPath: /opt/config
-              name: '${#stage("Deploy to Production EKS Cluster").outputs.artifacts[0].reference}'
+              name: '${#stage("Deploy Manifest").outputs.artifacts[0].reference}'
       volumes:
         - configMap:
-            name: '${#stage("Deploy to Production EKS Cluster").outputs.artifacts[0].reference}'
-          name: '${#stage("Deploy to Production EKS Cluster").outputs.artifacts[0].reference}'
+            name: '${#stage("Deploy Manifest").outputs.artifacts[0].reference}'
+          name: '${#stage("Deploy Manifest").outputs.artifacts[0].reference}'
 
