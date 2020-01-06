@@ -21,9 +21,9 @@ spec:
             - containerPort: 80
           volumeMounts:
             - mountPath: /opt/config
-              name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
+              name: '${#stage("Deploy ConfigMap to QA").outputs.artifacts[0].reference}'
       volumes:
         - configMap:
-            name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
-          name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
+            name: '${#stage("Deploy ConfigMap to QA").outputs.artifacts[0].reference}'
+          name: '${#stage("Deploy ConfigMap to QA").outputs.artifacts[0].reference}'
 
