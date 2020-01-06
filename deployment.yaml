@@ -21,9 +21,9 @@ spec:
             - containerPort: 80
           volumeMounts:
             - mountPath: /opt/config
-              name: special-config
+              name: my-special-config
       volumes:
         - configMap:
             name: special-config
-          name: special-config
+          name: my-special-config
 
