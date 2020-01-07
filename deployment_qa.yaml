@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,9 +22,8 @@ spec:
             - containerPort: 80
           volumeMounts:
             - mountPath: /opt/config
-              name: my-special-config
+              name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
       volumes:
         - configMap:
-            name: special-config
-          name: my-special-config
-
+            name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
+          name: '${#stage("Deploy ConfigMap").outputs.artifacts[0].reference}'
