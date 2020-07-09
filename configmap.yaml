@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: special-config
 data:
-  favorite.color: Green
+  favorite.color: Yellow
   home.city: San Francisco
